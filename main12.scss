@@ -1,0 +1,989 @@
+$containerWidth: 1110px;
+$baseFontSize: 16px;
+
+$gray: #f5f5f5;
+$blue: #f2f5f4;
+$black: #292929;
+$graydark: #666666;
+$red: #e01f3d;
+
+//bottom
+
+@import "media";
+@import "layout";
+//@import "normalize.css";   //нормализатор стилей для разных браузеров.Его скачивают
+@import url("https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Alegreya+Sans&display=swap");
+
+@import "componets/header";
+@import "componets/glavnaya";
+@import "componets/pochemu";
+@import "componets/shop";
+@import "componets/team";
+@import "componets/slider";
+@import "componets/feedback";
+@import "componets/video";
+@import "componets/zacaz";
+@import "componets/map";
+@import "componets/footer";
+@import "componets/paginator";
+@import "componets/figura";
+@import "componets/privet";
+@import "componets/modal";
+
+@media (max-width: 1100px) {
+  html {
+    font-size: 14px;
+  }
+  .container {
+    max-width: 700px;
+  }
+
+  .menu__title {
+    white-space: nowrap;
+  } //запрет на пернос на вторую строчку
+
+  .contacts {
+    white-space: nowrap;
+  }
+}
+
+//@media (max-width:1100px){
+//html{font-size: 14px;}
+// .privet{
+//opacity: 0;
+//  display: none;
+// }
+//}
+
+// header  и главная для планшета
+
+@media (max-width: 768px) {
+  html {
+    font-size: 13px;
+  }
+  .container {
+    max-width: 700px;
+    flex-direction: column;
+  }
+  .menu,
+  .contacts {
+    display: none;
+  }
+
+  .gamburger {
+    display: block;
+    width: 30px;
+    height: 30px;
+    position: relative;
+    right: 1rem;
+  }
+
+  .gamburger span {
+    background: #292929;
+  }
+
+  .header__mobile {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+
+    min-width: 700px;
+  }
+  //.glavnaya__pictures{
+  // }
+
+  .container__glavnaya {
+    display: flex;
+    flex-direction: column-reverse;
+    min-width: 0; //при адаптиве обнуляем мин ширину обертки
+    max-width: 450px; //фиксимальную делаем меньше следующего медиа запроса
+    width: auto;
+    //position: relative;
+  }
+
+  .glavnaya__preview {
+    display: block;
+    width: 34rem;
+  }
+
+  .glavnaya__pictures {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    //position: absolute;
+    margin-left: -1em;
+    height: 320px;
+    width: 320px;
+  }
+
+  .glavnaya__one {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    //position: absolute;
+    margin-left: 13em;
+  }
+  .glavnaya__text {
+    text-align: center;
+    transform: translate(-1em);
+  }
+  .glavnaya__title {
+    text-align: center;
+    transform: translate(-3em);
+  }
+  .glavnaya__button {
+    margin-left: 9em;
+    padding: 20px 40px;
+  }
+  .glavnaya__spisok {
+    opacity: 0;
+  }
+
+  .one__gl{
+    position: relative;
+    left:100px;
+  }
+}
+
+// pochemu для планшета
+
+@media (max-width: 768px) {
+  html {
+    font-size: 13px;
+  }
+  .container {
+    max-width: 700px;
+    flex-direction: column;
+  }
+
+  .pochemu {
+    display: flex;
+    min-width: 0; //при адаптиве обнуляем мин ширину обертки
+    //max-width: 450px;  //фиксимальную делаем меньше следующего медиа запроса
+    //width: auto;
+    //position: relative;
+    //left: 1em;
+  }
+  .pochemu__text {
+    text-align: center;
+    transform: translate(0em);
+  }
+
+  .pochemu__title {
+    text-align: center;
+    margin-left: -85px;
+  }
+
+  .pochemu__item {
+    margin-right: 20px;
+  }
+}
+
+// SHOP  для планшета
+
+@media (max-width: 768px) {
+  html {
+    font-size: 13px;
+  }
+  .container {
+    max-width: 700px;
+  }
+  
+
+  .shop {
+    margin-top: 0;
+    min-height: 800px;
+    max-width: 100%;
+  }
+
+  .tablets__triegle {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+  }
+
+  .shop__item{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .bx-viewport{ 
+    position: relative;
+                      ////////////////
+    left:280px;
+ }
+
+  .triegle__black__two__display,.triegle__black__one__display{
+    width: rem(40px);
+    height: rem(40px);
+    position: relative;
+    top: -30%;
+    flex-shrink: 0;
+  }
+ // .triegle__black__two__display,
+//  .triegle__black__one__display {
+ //   display: none;
+ // }
+
+ // .triegle__black__one__tablets {
+//    border: transparent solid rem(30px);
+//    border-right: black solid rem(30px);
+ //   border-left-width: 0;
+ //   height: 0;
+ //   width: 0;
+ //   margin-right: rem(10px);
+ //   position: relative;
+ // }
+
+ // .triegle__black__one__tablets:after {
+ //   content: "";
+ //   border: transparent solid rem(30px);
+ //   border-right: #f8faf9 solid rem(30px);
+ //   border-left-width: 0;
+ //   height: 0;
+ //   width: 0;
+ //   position: absolute;
+ //   top: -25px;
+ //   left: rem(2px);
+ // }
+
+ // .triegle__black__two__tablets {
+ //   border: transparent solid rem(30px);
+ //   border-left: black solid rem(30px);
+ //   border-right-width: 0;
+ //   height: 0;
+ //   width: 0;
+  //  margin-left: rem(10px);
+ //   position: relative;
+ // }
+
+ // .triegle__black__two__tablets:after {
+  //  content: "";
+  //  border: transparent solid rem(30px);
+  //  border-left: #f8faf9 solid rem(30px);
+  //  border-right-width: 0;
+  //  height: 0;
+  //  width: 0;
+  //  position: absolute;
+  //  top: -25px;
+  //  left: -26px;
+  //}
+
+  .vipad {
+    display: none;
+  }
+
+  .shop__pictures {
+    margin-right: 0;
+    width: 305px;
+    height: 305px;
+  }
+  .shop__content {
+    margin-left: 0;
+  }
+
+  .shop__box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .shop__text {
+    text-align: center;
+  }
+
+  .shop__desk {
+    text-align: center;
+  }
+
+  .shop__button {
+    padding: 20px 40px;
+  }
+}
+
+//team( команда) для планшета
+
+@media (max-width: 768px) {
+  html {
+    font-size: 13px;
+  }
+  .container {
+    max-width: 700px;
+  }
+  .team__box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top:rem(50px);
+
+  }
+
+  .team__headline {
+    margin-left: 19rem;
+}
+
+.team__item {
+  margin-bottom: rem(50px);
+}
+}
+
+//slider для планшета
+@media (max-width: 786px) {
+  html {
+    font-size: 13px;
+  }
+
+  .slider {
+    height: 100vh;
+    max-width: 786px;
+    position: relative;
+    display: flex;
+    /* justify-content: space-between; */
+  }
+
+  //.slider__pictures {
+  //overflow: hidden;
+  //height: 100%;
+  //width: 100%;
+  //margin-left: -20px;
+  // }
+
+  .slider__item {
+    width: 18.75rem;
+    height: 100vh;
+    display: flex;
+    position: absolute;
+    /* justify-content: end; */
+    /* align-items: end; */
+    margin-left: 482px;
+  }
+
+  .slider__text__one {
+    color: #fff;
+    transform: rotate(-90deg);
+    top: 12.5rem;
+    left: -72px;
+    white-space: nowrap;
+    position: relative;
+  }
+}
+
+//  feedback (отзывы) для планшета
+
+@media (max-width: 768px) {
+  html {
+    font-size: 13px;
+  }
+  .container {
+    max-width: 700px;
+    flex-direction: column;
+  }
+
+  .feedback__headline {
+    text-align: center;
+    transform: translate(-13em);
+  }
+
+  .feedback__contents {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 724px;
+    padding: 50px 24px 16px 24px;
+  }
+
+  .feedback__item__one {
+    ///////////////////////////////////////
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .feedback__photo {
+    width: 130px;
+    height: 130px;
+  }
+
+  .feedback__desk {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left: 0;
+    width: 676px;
+  }
+
+  .feedback__desk__one {
+    vertical-align: middle;
+    text-align: center;
+  }
+}
+//zacaz(заказ)для планшета
+
+@media (max-width: 768px) {
+  html {
+    font-size: 13px;
+  }
+  .container {
+    max-width: 700px;
+    flex-direction: column;
+  }
+
+  .form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .form__row {
+    margin-right: 0;
+  }
+
+  .form__row__four {
+    width: 28.75rem;
+  }
+
+  .form__imput--textarea {
+    height: 80px;
+  }
+
+  .form__imput {
+    height: 36px;
+  }
+
+  .form__imput__one {
+    height: 36px;
+  }
+
+  .form__imput__four {
+    height: 36px;
+  }
+  .controls__elem__one {
+    display: flex;
+    align-items: center;
+  }
+
+  .controls__tag {
+    content: "";
+    width: 0.8125rem;
+    height: 0.8125rem;
+    border-radius: 50%;
+    display: block;
+    position: absolute;
+    top: 0.375rem;
+
+    right: 5px;
+    margin: auto;
+    background: red;
+    overflow: hidden;
+    color: red;
+  }
+
+  .zacaz__button {
+    display: flex;
+    justify-content: center;
+  }
+
+  .zacaz__button__one {
+    padding: 20px 40px 20px 40px;
+  }
+}
+
+//  footer для планшета
+
+@media (max-width: 768px) {
+  //почему у меня не работает при max-width местоположение разделов футера ?
+  html {
+    font-size: 13px;
+  } //как сделать адаптив для футера?
+  .container {
+    width: 700px;
+  }
+  .footer {
+    display: flex;
+    justify-content: space-between;
+    padding: rem(20px);
+    align-items: center;
+    height: 110px;
+    flex-direction: row;
+  }
+
+  .footer__col {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .footer__contacts {
+    display: flex;
+  }
+
+  .footer__col--align--right {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .socials {
+    margin-right: 3.125rem;
+    display: flex;
+    justify-content: flex-end;
+  }
+}
+
+
+
+
+//heder  и главная для телефона
+
+@media (max-width: 480px) {
+  html {
+    font-size: 12px;
+  }
+  .header {
+    margin-left: 30px;
+  }
+
+  .container {
+    max-width: 480px;
+    min-width: 320px;
+    flex-direction: column;
+  }
+  .menu,
+  .contacts {
+    display: none;
+  }
+
+  .gamburger {
+    display: block;
+    position: relative;
+    right: 6rem;
+  }
+
+  .gamburger span {
+    background: #292929;
+  }
+
+  .header__mobile {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+
+    min-width: 510px;
+  }
+
+  .container__glavnaya {
+    flex-direction: column-reverse;
+    min-width: 0; //при адаптиве обнуляем мин ширину обертки
+    max-width: 200px;
+    width: auto;
+    margin-left: 150px;
+  }
+
+  .glavnaya__pictures {
+    width: 100%;
+  }
+
+  .glavnaya__spisok {
+    opacity: 0;
+  }
+}
+
+//  pochemu    для телефона
+
+@media (max-width: 480px) {
+  html {
+    font-size: 12px;
+  }
+
+  .pochemu {
+    display: flex;
+    min-width: 0;
+    min-height: 800px;
+  }
+
+  .pochemu__box {
+    margin-top: 0;
+    min-height: 800px;
+    max-width: 460px;
+  }
+
+  .pochemu__content {
+    margin-left: 0;
+    display: flex;
+    justify-content: center;
+    width: 440px;
+  }
+
+  .pochemu__title {
+    width: 340px;
+    margin-left: 10px;
+  }
+
+  .pochemu__spisok {
+    max-width: 470px;
+    min-width: 320px;
+  }
+
+  .pochemu__list {
+    display: flex;
+    flex-direction: column;
+    max-width: 470px;
+    min-width: 400px;
+  }
+
+  .pochemu__item {
+    display: flex;
+    align-items: center;
+    flex-direction: row; //почему у меня здесь не срабатывает flex (адаптив для телефона
+    //padding: 0;
+    //margin: 0 ;
+    position: relative;
+    max-width: 400px;
+  }
+
+  .pochemu__item__text {
+    display: flex;
+    //flex-direction: column;
+    //padding: 0;
+    //margin: 0;
+    position: absolute;
+    align-items: center;
+    width: 200px;
+    margin-left: 130px;
+  }
+
+  .circle {
+    content: "";
+    border-radius: 50%;
+    width: 8rem;
+    height: 8rem;
+    background: #f2f5f4;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    margin-right: 12px;
+  }
+}
+
+//shop  для телефона
+
+@media (max-width: 480px) {
+  html {
+    font-size: 12px;
+  }
+
+  .shop {
+    margin-top: 0;
+    min-height: 800px;
+    max-width: 460px;
+  }
+
+  //.bx-viewport{
+                          ////////////////
+ //   left:20%;
+ // }
+
+  .triegle__black__two__display,.triegle__black__one__display{
+    width: rem(40px);
+    height: rem(40px);
+    position: relative;
+    top: -30%;
+    
+    flex-shrink: 0;
+  }
+   // .triegle__black__two__display,
+   // .triegle__black__one__display {
+   //   display: none;
+   // }
+
+   // .triegle__black__one__tablets {
+      // border: transparent solid rem(30px);
+      // border-right: black solid rem(30px);
+      // border-left-width: 0;
+      // height: 0;
+      // width: 0;
+      // margin-right: rem(10px);
+   //   position: relative;
+   // }
+
+   // .triegle__black__one__tablets:after {
+   //   content: "";
+      // border: transparent solid rem(30px);
+      //  border-right: #F8FAF9 solid rem(30px);
+      // border-left-width: 0;
+      // height: 0;
+      //  width: 0;
+   //   position: absolute;
+   //   top: -23px;
+   //   left: rem(2px);
+   // }
+
+   // .triegle__black__two__tablets {
+      // border: transparent solid rem(30px);
+      // border-left: black solid rem(30px);
+      // border-right-width: 0;
+      // height: 0;
+      // width: 0;
+      // margin-left: rem(10px);
+   //   position: relative;
+   // }
+
+    //.triegle__black__two__tablets:after {
+    //  content: "";
+      // border: transparent solid rem(30px);
+      // border-left: #F8FAF9 solid rem(30px);
+      //border-right-width: 0;
+      //height: 0;
+      // width: 0;
+     // position: absolute;
+     // top: -23px;
+     // left: -25px;
+   // }
+
+    .shop__button {
+      padding: 20px 35px;
+    }
+  
+
+  .vipad {
+    display: none;
+  }
+
+  .shop__pictures {
+    margin-right: 0;
+    width: 305px;
+    height: 305px;
+  }
+  .shop__content {
+    margin-left: 0;
+  }
+
+  .shop__box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .shop__text {
+    text-align: center;
+  }
+
+  .shop__desk {
+    text-align: center;
+  }
+}
+
+//team (команда) дляя телефона
+
+@media (max-width: 480px) {
+  .team {
+    margin-top: 0;
+    min-height: 59px;
+    max-width: 700px;
+    padding: 40px 40px;
+  }
+  .team__headline {
+    margin-left: 8rem;
+    margin-top: 0;
+  }
+
+  //.team--version--desktop {
+ //   opacity: 0;
+ // }
+ // .team--version--phone {
+ //   opacity: 1;
+ // }
+
+ .team__box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  top:rem(50px);
+
+}
+
+
+.team__item {
+margin-bottom: rem(50px);
+}
+
+ 
+
+  .team--version--phone {
+    display: flex;
+  }
+
+  //.team__item {
+  //  position: relative;
+  //}
+  //.team__vipad {
+  //  margin-top: 0;
+  //}
+  
+
+  //.team__photo {
+  //  display: block;
+  //}
+ // .team__box__one {
+  //  overflow: hidden;
+  //  position: absolute;
+ //   height: 0;
+ // }
+
+  //.team__box__one--activ {
+ //   min-height: 25rem;
+  //}
+
+ // .team__box__content {
+  //  min-height: 25rem;
+ // }
+}
+
+//slider для телефона
+@media (max-width: 480px) {
+  .slider {
+    height: 100vh;
+    max-width: 480px;
+    position: relative;
+    display: flex;
+    /* justify-content: space-between; */
+  }
+
+  //.slider__pictures {
+  // overflow: hidden;
+  // height: 100%;
+  // width: 100%;
+  // margin-left: -20px;
+  //}
+
+  .slider__item {
+    width: 18.75rem;
+    height: 100vh;
+    display: flex;
+    position: absolute;
+    /* justify-content: end; */
+    /* align-items: end; */
+    margin-left: 240px;
+  }
+
+  .slider__text__one {
+    color: #fff;
+    transform: rotate(-90deg);
+    margin-top: 12.5rem;
+    margin-left: -72px;
+    white-space: nowrap;
+  }
+}
+//feedback (отзывы) для телефона
+
+@media (max-width: 480px) {
+  html {
+    font-size: 12px;
+  }
+  .container {
+    max-width: 480px;
+    min-width: 320px;
+    flex-direction: column;
+  }
+
+  .feedback__headline {
+    text-align: center;
+    transform: translate(-12em);
+  }
+
+  .feedback__contents {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 460px;
+    padding: 50px 24px 16px 24px;
+  }
+
+  .feedback__item__one {
+    ///////////////////////////////////////
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .feedback__photo {
+    width: 130px;
+    height: 130px;
+  }
+
+  .feedback__desk {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left: 0;
+    width: 676px;
+  }
+
+  .feedback__content {
+    text-align: center;
+  }
+}
+//zacaz (отзывы) для телефона
+@media (width: 480px) {
+  .form__row__eight {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+  }
+  .zacaz__button__one {
+    padding: 20px 35px 20px 35px;
+  }
+}
+
+@media (width: 480px) {
+  //как сделать адаптив для футера?  width или max-width?
+  html {
+    font-size: 12px;
+  }
+  .footer {
+    display: flex;
+    height: 150px;
+    justify-content: space-between;
+    padding: 1.25rem;
+    align-items: center;
+  }
+
+  .footer__col {
+    margin-top: -20px;
+    align-items: center;
+  }
+
+  .socials {
+    margin-right: 3.125rem;
+    height: 24px;
+    margin-top: 20px;
+  }
+
+  .icon {
+    height: 24px;
+    width: 24px;
+  }
+}
+//privet
+@media (max-width: 480px) {
+  //как сделать адаптив для футера?  width или max-width?
+  html {
+    font-size: 12px;
+  }
+  .menu__privet {
+    margin-left: 16rem;
+  }
+}
