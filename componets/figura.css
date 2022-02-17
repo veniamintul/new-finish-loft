@@ -1,0 +1,73 @@
+.one__figura {
+  display: block;
+  right: 10%;
+  top: 112%;
+  z-index: 10;
+  position: absolute;
+  height: rem(50px);
+  width: rem(10px);
+  transform: rotate(20deg);
+  background: #C4C4C4; }
+
+.two__figura {
+  display: block;
+  right: 90%;
+  top: 214%;
+  z-index: 10;
+  position: absolute;
+  height: 0;
+  width: 0;
+  border: solid rem(30px) transparent;
+  border-top: rem(30px) solid crimson;
+  border-bottom-width: 0;
+  transform: rotate(60deg); }
+
+.three__figura {
+  background: #292929;
+  width: rem(24px);
+  height: rem(24px);
+  transform: rotate(60deg);
+  z-index: 10;
+  position: absolute;
+  right: 10%;
+  top: 314%;
+  display: block; }
+
+.four__figura {
+  background: #868686;
+  border-radius: 50%;
+  width: rem(35px);
+  height: rem(35px);
+  z-index: 10;
+  position: absolute;
+  right: 90%;
+  top: 614%;
+  display: block; }
+
+.five__figura__first {
+  height: 0;
+  width: rem(60px);
+  border-right: solid rem(20px) transparent;
+  border-left: solid rem(20px) transparent;
+  border-bottom: rem(20px) solid crimson;
+  position: relative; }
+
+.five__figura__second {
+  position: absolute;
+  height: 0;
+  width: rem(60px);
+  border-right: solid rem(20px) transparent;
+  border-left: solid rem(20px) transparent;
+  border-bottom: rem(20px) solid crimson;
+  position: relative;
+  transform: rotate(180deg); }
+
+.five__figura {
+  z-index: 10;
+  position: absolute;
+  right: 10%;
+  top: 713%;
+  display: block;
+  transform: rotate(-30deg); }
+
+/*# sourceMappingURL=figura.css.map */

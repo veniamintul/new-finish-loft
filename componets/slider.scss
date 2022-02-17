@@ -1,0 +1,176 @@
+
+  .slider{
+    height: 100vh;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    background:url("slider/Slider.png") ;
+    //overflow: hidden;
+    object-fit:cover; 
+  }
+  
+  //.slider__pictures{
+    /*background: url('slider/Slider.png') no-repeat;
+    почему так странно отбразилась картинка я же поставил не повторение*/
+    //overflow: hidden;
+   // object-fit: cover;   //полное заполнение блоков
+    //margin-left: -rem(200px);
+     
+  //}
+
+  .container__slider{
+    height: 100%;
+    width: 100%;
+  }
+  
+  .slider__text{
+    color:#fff;
+    margin-left: rem(85px);
+    margin-top: rem(90px);
+    position: absolute;
+  }
+
+ 
+
+  
+  //.slider__block{
+  //  width: rem(300px);
+  //  height: 100vh;
+  //  display: flex; 
+  //}
+  
+  .slider__item{               //ul
+    //display: flex;
+    //justify-content: space-between;
+    position: absolute;
+    display: flex;
+    right:  0;
+    top:0;
+    bottom:0;
+  
+  }
+  
+  
+ 
+ 
+
+
+  .slider__list{         //li
+   display: flex;
+  
+    //padding: rem(20px);
+    position: relative;
+    
+  }
+  
+  .atlas{
+    display: flex;
+    width: rem(100px);
+    height: 100vh;
+    background:  #999999;
+    justify-content: flex-start;
+    position: relative;
+  }
+
+  .black{
+    width: rem(100px);
+    height: 100vh;
+    background: #151515;
+    position: relative;
+  }
+
+  .red{
+    display: flex;
+    width: rem(100px);
+    height: 100vh;
+    background: #E01F3C;
+    justify-content: flex-end;
+    position: relative;
+  }
+  
+
+  .slider__text__vloz{     //текст внутри блоков ли
+    position: absolute;
+    top: rem(200px);
+    right:-4rem;
+    color:#fff;
+    transform: rotate(-90deg);
+    height: rem(36px);  
+    white-space: nowrap;    /*текст в одну строку*/
+    font-size: rem(36px);
+    text-decoration: none;
+   
+  }
+
+  //.slider__text__vloz--one{
+  //  position: absolute;
+  //  top: rem(200px);
+  //  right:-4rem;
+  //  margin: 0;
+
+  //}
+
+  //.slider__text__vloz--two{
+  //  position: absolute;
+  //  top: rem(200px);
+  //  right:-5rem;
+  //  margin: 0;
+  //}
+
+  //.slider__text__vloz--three{
+  //  position: absolute;
+  //  top: rem(200px);
+  //  right:-4rem;
+  //  margin: 0;
+  //}
+
+
+
+
+  .slider__content{
+    background: rgba(51, 53, 55, 0.9);
+    width: 0;
+    position: relative;
+    overflow: hidden;
+    transition: width .7s;
+
+    //padding: rem(20px);   //падинг не делаем ибо он входит в ширину и высоту эл-та и получается зазор даже при ширине 0
+  }
+
+  
+
+  .slider__list--activ .slider__content{
+    width: rem(500px);
+  }
+  
+
+  .slider__content__one{
+    display: flex;
+    align-items: center;
+    padding: 20px 60px 10px 10px;
+  }
+
+
+  .slider__text__two{
+    position: relative;
+  }
+
+  .slider__button{
+    position: relative;
+    width: rem(15px);
+    height: rem(15px);
+    background: #ffff;
+    top:-4rem;
+    right: -1rem;
+
+  }
+
+  
+ 
+  
+  
+  
+  
+  
+  
+  

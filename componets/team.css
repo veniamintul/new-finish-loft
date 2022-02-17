@@ -1,0 +1,108 @@
+.team {
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  /*height: rem(720px);*/
+  height: 100vh; }
+
+.team__headline {
+  display: block;
+  margin-top: rem(45px);
+  margin-left: rem(400px); }
+
+.team__title {
+  font-style: normal;
+  font-weight: bold;
+  font-size: rem(48px);
+  line-height: rem(52px);
+  text-transform: uppercase;
+  color: #292929; }
+
+.team__box {
+  display: flex;
+  justify-content: space-between;
+  max-width: rem(940px);
+  height: 34rem; }
+
+.team--version--desktop {
+  display: flex; }
+
+.team--version--phone {
+  display: none; }
+
+.team__item {
+  display: block;
+  max-width: rem(220px);
+  margin-right: rem(20px); }
+
+.team__item:last-child {
+  margin-right: 0; }
+
+.team__vipad {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: #000000; }
+
+.team__box__one {
+  overflow: hidden;
+  margin-top: rem(5px);
+  width: rem(220px);
+  background: #fff;
+  height: 0; }
+
+.team__box__one--activ .team__triangle {
+  transform: rotate(0); }
+
+.team__box__content {
+  height: 0;
+  overflow: hidden; }
+
+.team__box-wrapp {
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+
+.team__copy {
+  font-style: normal;
+  font-weight: normal;
+  font-size: rem(16px);
+  line-height: rem(19px);
+  color: #000000; }
+
+.team__title__one {
+  font-style: normal;
+  font-weight: normal;
+  font-size: rem(16px);
+  line-height: rem(19px);
+  text-align: center;
+  color: #666666; }
+
+.team__text {
+  font-style: normal;
+  font-weight: bold;
+  font-size: rem(18px);
+  line-height: rem(21px);
+  color: #292929; }
+
+.team__triangle {
+  border: rem(10px) solid transparent;
+  border-top: rem(10px) solid crimson;
+  border-bottom-width: 0;
+  height: rem(0px);
+  width: rem(0px);
+  content: "";
+  margin-left: rem(10px);
+  transform: rotate(180deg); }
+
+@media screen and (max-width: 768px) {
+  .team--version--phone {
+    display: flex;
+    flex-direction: column; }
+
+  .team--version--desktop {
+    display: none; } }
+
+/*# sourceMappingURL=team.css.map */
